@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "../Card/Card";
 
-const CompanyPage = ({ company }) => {
+const CompanyPage = ({ company,data }) => {
   const [time, setTime] = useState("");
   let updateTime;
 
@@ -37,10 +37,10 @@ const CompanyPage = ({ company }) => {
       {/* Reports */}
       <div className="mt-3">
         <h2>Reports</h2>
-        <div className="w-full grid grid-cols-6 gap-2">
-          {company?.reports?.map((report) => (
+        <div className="w-full grid grid-cols-6 gap-2 h-3/4 ">
+          {data?.map(() => (
             <div className="col-span-1 md:col-span-2">
-              <Card report={report} />
+              <Card report={company.reports[0]} />
             </div>
           ))}
         </div>

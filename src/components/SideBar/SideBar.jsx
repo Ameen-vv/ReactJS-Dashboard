@@ -19,7 +19,7 @@ const SideBar = ({ children }) => {
   ];
 
   return (
-    <div className="container flex h-full">
+    <div className="container flex h-[92vh]">
       {/* SideBar */}
       <div className="max-h-full left-0 top-0 w-1/5 bg-zinc-50 shadow-[inset_0_-1px_8px_rgba(0,0,0.4,0.4)] flex flex-col">
         <div className="w-full flex items-center p-3 pt-4">
@@ -90,7 +90,7 @@ const SideBar = ({ children }) => {
         </div>
       </div>
       {/* content */}
-      <div className="  w-4/5">{children}</div>
+      <div className=" h-full w-4/5 overflow-auto">{children}</div>
     </div>
   );
 };
